@@ -126,6 +126,17 @@ exports.Prisma.UserScalarFieldEnum = {
   updatedAt: 'updatedAt'
 };
 
+exports.Prisma.BankAccountScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  name: 'name',
+  initialBalance: 'initialBalance',
+  type: 'type',
+  color: 'color',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -135,10 +146,15 @@ exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
 };
-
+exports.BankAccountType = exports.$Enums.BankAccountType = {
+  CHECKING: 'CHECKING',
+  INVESTMENT: 'INVESTMENT',
+  CASH: 'CASH'
+};
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  User: 'User',
+  BankAccount: 'BankAccount'
 };
 
 /**
