@@ -145,6 +145,17 @@ exports.Prisma.CategoryScalarFieldEnum = {
   type: 'type'
 };
 
+exports.Prisma.TransactionScalarFieldEnum = {
+  id: 'id',
+  userId: 'userId',
+  bankAccountId: 'bankAccountId',
+  categoryId: 'categoryId',
+  name: 'name',
+  value: 'value',
+  date: 'date',
+  type: 'type'
+};
+
 exports.Prisma.SortOrder = {
   asc: 'asc',
   desc: 'desc'
@@ -153,6 +164,11 @@ exports.Prisma.SortOrder = {
 exports.Prisma.QueryMode = {
   default: 'default',
   insensitive: 'insensitive'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
 };
 exports.BankAccountType = exports.$Enums.BankAccountType = {
   CHECKING: 'CHECKING',
@@ -168,7 +184,8 @@ exports.TransactionType = exports.$Enums.TransactionType = {
 exports.Prisma.ModelName = {
   User: 'User',
   BankAccount: 'BankAccount',
-  Category: 'Category'
+  Category: 'Category',
+  Transaction: 'Transaction'
 };
 
 /**
