@@ -1,18 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import { Prisma } from '@prisma/client';
-import { PrismaService } from 'src/shared/database/prisma.service';
+import { type Prisma } from '@prisma/client';
+
+import { PrismaService } from '../prisma.service';
 
 @Injectable()
 export class UsersRepository {
   constructor(private readonly prismaService: PrismaService) {}
 
   create(createDto: Prisma.UserCreateArgs) {
-    const user = this.prismaService.user.create(createDto);
-
-    return user;
+    return this.prismaService.user.create(createDto);
   }
 
-  findByEmail(findUnique: Prisma.UserFindUniqueArgs) {
-    return this.prismaService.user.findUnique(findUnique);
+  findUnique(findUniqueDto: Prisma.UserFindUniqueArgs) {
+    return this.prismaService.user.findUnique(findUniqueDto);
   }
 }
